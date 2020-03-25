@@ -39,8 +39,8 @@
         <?php echo form_open($this->uri->uri_string(),array('id'=>'ticketForm','class'=>'disable-on-submit')); ?>
 	           <?php echo render_input('subject','ticket_form_subject','','text',array('required'=>'true')); ?>
         <?php hooks()->do_action('ticket_form_after_subject'); ?>
-	   
-	   
+
+
        <?php
        $selectedDepartment = (count($departments) == 1 ? $departments[0]['departmentid'] : '');
        if($this->input->get('department_id')) {
@@ -104,7 +104,7 @@
 <?php } ?>
 <div class="clearfix"></div>
 <div class="text-center submit-btn-wrapper">
-  <button class="btn btn-success" id="form_submit" type="submit"><?php echo _l('ticket_form_submit'); ?></button>
+  <button class="btn btn-success" id="form_submit" type="submit"><?php echo _l('INVIA'); ?></button>
 </div>
 
 <?php hooks()->do_action('ticket_form_after_submit_button'); ?>
